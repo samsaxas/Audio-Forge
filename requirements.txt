@@ -1,0 +1,26 @@
+# Core TTS engine (ONNX runtime build of Kokoro — no torch/GPU required)
+kokoro-onnx>=0.4.0
+
+# Text extraction
+ebooklib>=0.18
+beautifulsoup4>=4.12
+pdfplumber>=0.11
+lxml>=5.0
+
+# Audio processing / export
+soundfile>=0.12
+numpy>=1.26
+pydub>=0.25
+
+# Chapter markers (ID3 CHAP/CTOC)
+mutagen>=1.47
+
+# Local LLM cleanup client
+requests>=2.31
+
+# Config, CLI, UX
+pyyaml>=6.0
+tqdm>=4.66
+
+# Testing
+pytest>=8.0

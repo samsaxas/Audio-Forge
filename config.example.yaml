@@ -1,0 +1,31 @@
+# Copy to myconfig.yaml and edit. Run with: audioforge convert --config myconfig.yaml
+input: examples/sample_book.txt
+output: out/sample_book
+models_dir: models/
+
+default_voice: af_sarah
+speed: 1.0
+lang: en-us
+
+# Local LLM cleanup (requires `ollama serve` running + the model pulled)
+clean: false
+ollama_model: llama3.2
+ollama_host: http://localhost:11434
+
+workers: 4
+max_chunk_chars: 400
+silence_between_chunks_ms: 220
+silence_between_chapters_ms: 900
+
+# Also emit a native .m4b (needs ffmpeg on PATH)
+m4b: false
+
+# Per-chapter narrator override (key = exact chapter title as extracted;
+# run `audioforge estimate` first to see the detected titles)
+chapter_voices: {}
+# "Chapter 12": am_adam
+
+# Auto-detected "Name: dialogue" lines get voiced with these speakers
+speaker_voices: {}
+# "Marcus": am_adam
+# "Elena": af_bella

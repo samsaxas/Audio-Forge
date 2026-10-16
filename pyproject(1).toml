@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audioforge"
+version = "1.0.0"
+description = "Local-first text-to-audiobook converter powered by Kokoro TTS and Ollama"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "AudioForge contributors" }]
+
+[project.scripts]
+audioforge = "audioforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
